@@ -1,20 +1,23 @@
 Python Day 1
 ======
 
-Welcome to Python! In order to ease the load on the instructor in the classroom, we are going to start using this GitHub repository to share problems and keep everyone working at their own pace. There will be an instructor to guide the learning, but we expect that you make a commitment to attempting to solve your problems indepedently, rather than becoming dependent on the instructor for help.
+Welcome to Python! In the next two weeks, we're going to shift our focus from short visual examples with `turtle` to problem solving and text-based games.
+
+In order to keep everyone working at their own pace, we are going to be using this GitHub repository to outline the various steps of a problem. There will be instructors to guide the learning, but we expect that you make your best effort toward working indepedently, rather than becoming dependent on the instructors for help.
 
 **The only way you'll learn coding is if you struggle through the errors.**
 
-Today, we're going to use Python to answer the question *How many Friday the 13ths have passed since January 1st, 1900?*? We'll get started by using loops to answer this question.
+Today, we're going to use Python to answer the question *How many Friday the 13ths are there between January 1st, 1900 and December 31st, 2014?*? We'll focus on using loops to break down this problem.
 
 ### The `range` function
-Recall how to use `range`. The `range` function produces a list with a specified number of elements. Below, we made a list containing every year from 1900 to 2014.
+Recall the `range` function, which produces a list with the specified number of elements. Below, we used `range` to make a list containing every year from 1900 to 2014.
 ```python
 years = range(1900, 2015)
 ```
-*Notice how the range goes from `1900` to `2015`, not to `2014`*. This is because the range function takes in a number to start counting from and the number to end at, and doesn't include the ending number.
+*Notice how the range goes from `1900` to `2015`, not to `2014`*. This is because the second input to `range` is the number to end before, and doesn't include that ending value in the resulting list.
 
-Try printing out every year in the list.
+### Looping through a list
+Try printing out every year in the list by looping through it.
 ```python
 years = range(1900, 2015)
 for y in years:
@@ -22,7 +25,7 @@ for y in years:
 ```
 
 ### Counting with a variable
-Recall how to make variables and increment them. To create a variable, just think of a name that has no spaces or punctuation that you've not used yet, and give it a starting value.
+Recall how to make variables and increment them. To create a variable, just think of a name that has no spaces or punctuation *that you've not used yet*, and give it a starting value.
 ```python
 thisIsAVariable = 5
 ```
