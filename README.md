@@ -73,7 +73,7 @@ Notice the indentation. The indentation is indicating that *for every year in my
 
 ### Counting days
 
-Can you extend this to counting the number of days?
+Can you extend this to counting the number of days? That is, *how many days are there between January 1st, 1900 and December 31st, 2014?*
 
 Some pointers for this part of the problem:
  - You'll have to make another list.
@@ -84,26 +84,72 @@ Some pointers for this part of the problem:
 
 As you may know, different months have different numbers of days. In the `for` loop for months, you will have to check the month and do the corresponding loop.
 
-Here's an example that is unrelated to this current problem.
+Here's an example where we loop through the months of the year and print something different out for each month.
 ```python
 months = range(1, 13)
 for m in months:
-	if m == 1:
+	if m is 1:
 		print "I was born in January!"
-	if m == 2:
+	if m is 2:
 		print "I never got Valentine's day cards when I was a kid."
 	
 	# check the other months
 	
-	if m == 11:
+	if m is 11:
 		print "Thanksgiving!"
-	if m == 12:
+	if m is 12:
 		print "Christmas is the best time of the year."
 ```
 
+You can apply the same idea to loop through a different list of days based on which month it is. Some guidelines for completing this part of the problem:
+ - use Google to find out the number of days in each month
+ - use a loop to count the number of days (it will be useful later when we count Friday the 13ths)
+ - try to find a more efficient way to check months using `or` in the `if` condition.
 
+### Account for leap years
 
+If you were able to count days as expected (without accounting for leap years), you should have gotten a count of `41975`. If you got a number close to this but not exactly this, check your `range` functions to ensure that you are creating a list with an accurate number of elements.
 
+Now try accounting for leap years. This will involve refining the `if` conditions you wrote for the code above to take the `y` variable (the one looping through `years`) into account.
 
+Some guidelines for this part of the problem:
+ - Every 4 years, there is a leap year.
+ - Every 100 years, there is no leap year (ignoring the every 4 years rule).
+ - Every 400 years, there is a leap year (ignoring the every 100 years rule).
+
+### Print out every day
+
+At this point, it's a good idea to print out every year - month - day combination to make sure your loops are set up correctly. 
+
+Let's do a quick recap on how to print out things that combine `int`s (numbers) and `str`s (text). For example, if I had a variable `x` set to `4`, I could print out its value as so:
+```python
+x = 4
+print "x = " + str(x)
+```
+
+The `str` function converts the input `x` into text, that it can then add to the `"x = "` to produce `"x = 4"`. You can use the same idea to print out the current calendar day.
+```python
+print str(m) + " / " + str(d) + " / " + str(y)
+```
+
+### Print out the weekday as well
+
+We're going to give a little less guidance with this one. The basic idea is that you print out which day of the week it is along with every date that you print out. That is, instead of
+```
+...
+7 / 7 / 2014
+```
+
+your program prints out
+```
+...
+Monday, 7 / 7 / 2014
+```
+
+Think about how to represent each day of the week, and how to have that representation change as days of the week do.
+
+### Count Friday the 13ths
+
+If you're at this point, you are close to counting the number of Friday the 13ths. All you need now is an `if` condition that checks if the weekday is Friday, and the day of the week is `13`. You should get `198`.
 
 
