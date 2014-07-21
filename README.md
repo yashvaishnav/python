@@ -1,11 +1,5 @@
-Python Day 1
+Counting Friday the 13ths
 ======
-
-Welcome to Python! In the next two weeks, we're going to shift our focus from short visual examples with `turtle` to problem solving and text-based games.
-
-In order to keep everyone working at their own pace, we are going to be using this GitHub repository to outline the various steps of a problem. There will be instructors to guide the learning, but we expect that you make your best effort toward working indepedently, rather than becoming dependent on the instructors for help.
-
-**The only way you'll learn coding is if you struggle through the errors.**
 
 Today, we're going to use Python to answer the question *How many Friday the 13ths are there between January 1st, 1900 and December 31st, 2014?*? We'll focus on using loops to break down this problem.
 
@@ -105,9 +99,9 @@ for m in months:
 ```
 
 You can apply the same idea to loop through a different list of days based on which month it is. Some guidelines for completing this part of the problem:
- - use Google to find out the number of days in each month
+ - use Google to find out the number of days in each month.
  - use a loop to count the number of days (it will be useful later when we count Friday the 13ths)
- - try to find a more efficient way to check months using `or` in the `if` condition.
+ - try to find a more efficient way to check months using an `or` in the `if` condition.
 
 ### Account for leap years
 
@@ -153,6 +147,8 @@ Think about how to represent each day of the week, and how to have that represen
 
 ### Count Friday the 13ths
 
-If you're at this point, you are close to counting the number of Friday the 13ths. All you need now is an `if` condition that checks if the weekday is Friday, and the day of the week is `13`. You should get `198`.
+If you're at this point, you are close to counting the number of Friday the 13ths. All you need now is an `if` condition that checks if the weekday is Friday, and the day of the week is `13`. 
+
+**SPOILER ALERT**: You should get `198`.
 
 
