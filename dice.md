@@ -32,3 +32,9 @@ C = 'o '
 s = '-----\n|'+ C[r < 1] + ' ' + C[r < 3] + '|\n|'+ C[r < 5]
 print s + C[r & 1] + s[:: -1]
 ```
+
+Zane's 1 liner
+```python
+import random
+print" _____ \n"+'\n'.join([["|     |","| o   |","|  o  |","|   o |","| o o |"][x] for x in[[0,2,0],[1,0,3],[1,2,3],[4,0,4],[4,2,4],[4,4,4]][random.randint(0,5)]])+"\n|_____|"
+```
