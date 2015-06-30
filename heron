@@ -1,0 +1,21 @@
+Write a function to compute the area of a triangle based on the length of its sides.
+
+The first step in solving this problem is to understand Heron's formula. The first step in using the formula will find the semiperimeter (half the perimeter) of the triangle. It is best to initialize a float s for semiperimeter and use the triangle's sides to compute it, as shown below.
+
+s = ( a + b + c ) / 2
+
+Now, we can use Heron's formula with the semiperimeter in order to find the area of the triangle. The formula is displayed below.
+
+area = ( s * (s - a) * (s - b) * (s - c) ) ** 0.5
+
+Finally, we combine this code within a function that takes in the triangle's three side lengths as input. The function should return the area computed using Heron's formula. The solution is shown below.
+
+def triangleArea( a, b, c ):
+	s = 0.0
+	
+	s = ( a + b + c ) / 2
+	area = ( s * (s - a) * (s - b) * (s - c) ) ** 0.5
+	
+	return area
+
+print ( triangleArea( 7, 8, 9 ) )
